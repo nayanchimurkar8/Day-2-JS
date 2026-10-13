@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      this.classList.toggle('is-toggled');
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+      this.classList.toggle('is-toggled');
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+      this.classList.toggle('is-toggled');
+    ">Tech</button>
+  </body>
+</html>
