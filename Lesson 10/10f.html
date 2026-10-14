@@ -1,30 +1,21 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Toggle Button</title>
+  <head>
+    <link rel="stylesheet" href="10f.css">
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      toggleButton('.js-button');
+    ">Gaming</button>
 
-  <style>
-    .toggle-button {
-      background-color: rgb(230, 230, 230);
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      margin-right: 10px;
-      font-size: 15px;
-      cursor: pointer;
-    }
+    <button class="toggle-button js-button-2" onclick="
+      toggleButton('.js-button-2');
+    ">Music</button>
 
-    .is-toggled {
-      background-color: black;
-      color: white;
-    }
-  </style>
-</head>
-<body>
+    <button class="toggle-button js-button-3" onclick="
+      toggleButton('.js-button-3');
+    ">Tech</button>
 
-  <button class="toggle-button">Gaming</button>
-  <button class="toggle-button">Music</button>
-
-</body>
+    <script src="10f.js"></script>
+  </body>
 </html>
