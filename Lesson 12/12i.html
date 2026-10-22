@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+
+    <button onclick="
+      messages++;
+      displayNotification();
+    ">Add</button>
+
+    <button onclick="
+      if (messages > 0) {
+        messages--;
+
+        if (messages === 0) {
+          stopNotification();
+        }
+      }
+    ">Remove</button>
+    <script>
+      let messages = 2;
+
+      let intervalId;
+
+      let isDisplayingNotification;
+      displayNotification();
+      function displayNotification() {
+        if (isDisplayingNotification) {
+          return;
+        }
+        isDisplayingNotification = true;
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      }
+      function stopNotification() {
+        isDisplayingNotification = false;
+        clearInterval(intervalId);
+        document.title = 'App';
+      }
+    </script>
+  </body>
+</html>
