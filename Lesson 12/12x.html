@@ -1,0 +1,1 @@
+<p class="js-reset-confirmation"></p>
